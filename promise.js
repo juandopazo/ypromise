@@ -13,7 +13,8 @@ http://yuilibrary.com/license/
     if (typeof define === 'function' && define.amd) {
         define(factory);
     }
-    global.Promise = built;
+    global.PromisePolyfill = built;
+    global.Promise || (global.Promise = built);
 }(this, function () {
 
     var STATUS    = '{private:status}',
